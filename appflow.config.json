@@ -5,7 +5,7 @@
       "root": ".",
       "iosPath": "ios",
       "androidPath": "android",
-      "dependencyInstallCommand": "npm config set registry https://registry.npmjs.org/ && npm config set always-auth false && npm ci --legacy-peer-deps",
+      "dependencyInstallCommand": "npm ci --legacy-peer-deps --registry=https://registry.npmjs.org/",
       "webBuildCommand": "npm run build"
     }
   ]
