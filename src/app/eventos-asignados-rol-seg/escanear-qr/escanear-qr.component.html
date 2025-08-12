@@ -1,0 +1,129 @@
+<ion-header>
+  <ion-toolbar class="my-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Control De Entradas</ion-title>  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="ion-text-center ion-margin-bottom escaneos-container">
+    <ion-card>
+      <ion-card-content>
+        <ion-text>
+          <h4>Escaneos</h4>
+          <h1>{{ escaneados }}/{{ total }}</h1>
+        </ion-text>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- Botón Buscar Entrada para desktop -->
+  <ng-container *ngIf="!isMobile">
+    <div class="cont-bot">
+      <ion-button expand="block" (click)="redirect()">Buscar Entrada</ion-button>
+    </div>
+  </ng-container>
+
+  <ion-card>
+    <ion-card-content>
+
+      <!-- Formulario input con margen abajo -->
+      <form [formGroup]="form" class="form-referencia">
+        <ion-item>
+          <ion-input formControlName="idReferencia" maxlength="10" placeholder="Id Referencia"></ion-input>
+        </ion-item>
+      </form>
+
+      <!-- Botones juntos con separación -->
+      <div class="cont-bot botones-accion">
+        <ion-button expand="block" color="medium" (click)="switchQr()">
+          Habilitar Cámara
+        </ion-button>
+
+        <ion-button expand="block" (click)="redirect()" class="mi-boton no-effects" >
+          Buscar Entrada
+        </ion-button>
+      </div>
+
+      <!-- Contenedor para el QR, con margen arriba -->
+      <div class="cont-qr" *ngIf="camaraActive">
+        <app-qr 
+          [encendido]="camaraActive"
+          (valor)="procesarValor($event)"
+        ></app-qr>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+
+  <!-- ✅ Modal de Éxito -->
+  <div *ngIf="modalActive && exitoso" class="modal-overlay" style="display: flex; justify-content: center; align-items: center;">
+    <div class="modal-content border-green">
+      <div class="icon-container">
+        <img src="/assets/confirmData.svg" alt="Éxito" class="icon-success" />
+      </div>
+      <div class="info fw-bold">
+        <p class="nombre" style="font-size: 20px; font-weight: 700; margin: 0px 0px 10px 0px; text-align: start;">{{datosEntradaExito?.name}}</p>
+        <div class="doc">
+          <p class="sub-title" style="color: #ada5bd; text-align: start; margin: 0px;">{{ tipoIdentificacionNombre }}:</p>
+          <p style="text-align: start; color: #212529;  margin: 0px;">{{ datosEntradaExito?.numeroDNI }}</p>
+          <p class="sub-title" style="color: #ada5bd; text-align: start;  margin: 0px;" >ID:</p>
+          <p style="text-align: start; color: #212529; margin: 0px; ">{{ datosEntradaExito?.idLegible }}</p>
+          <p class="sub-title" style="color: #ada5bd; text-align: start; margin: 0px;" >Sector:</p>
+          <p class="text-wrap" style="margin: 0px; text-align: start; color: #212529">{{ datosEntradaExito?.nombreSector  }}</p>
+        </div>
+      </div>
+      <div class="actions mt-4">
+        <ion-button expand="block" fill="outline" (click)="cerrarModal()" class="boton-cerrar">
+        Cerrar
+        </ion-button>
+        <ion-button expand="block" color="success" (click)="confirmScan()" class="boton-aceptar">
+        Escanear
+        </ion-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ❌ Modal de Error -->
+  <div *ngIf="modalActive && !exitoso" class="modal-overlay" style="display: flex; justify-content: center; align-items: center;">
+    <div class="modal-content border-red">
+      <div class="icon-container">
+        <img src="assets/errorScan.svg" alt="Error" class="icon-success" />
+      </div>
+      <div class="info-error fw-bold mt-4 w-100" [ngClass]="{ 'padd-per': !datosEntradaError && !fechaExpiracion }">
+        <p class="error w-100">{{ mensajeError || 'Error inesperado' }}</p>
+
+        <!-- Datos de escaneo -->
+        <div *ngIf="datosEntradaError" class="details mt-4 mb-3">
+          <div class="icons">
+            <div class="icon-cont">
+              <ion-icon name="time-outline"></ion-icon>
+            </div>
+            <div class="data-error">
+              <p class="sub-title" style="margin: 0px;">{{ datosEntradaError?.scanTime | date: "dd-LLL-yyyy" }}</p>
+              <p class="detail-error">{{ horaDeScan ? (horaDeScan | date: "HH:mm'hs'") : '' }}</p>
+            </div>
+          </div>
+          <div class="icons">
+            <div class="icon-cont">
+              <ion-icon name="person-outline"></ion-icon>
+            </div>
+            <div class="data-error">
+              <p class="sub-title" style="margin: 0px;">Escaneado Por</p>
+              <p class="detail-error">{{ datosEntradaError?.nameScanBy }}</p>
+            </div>
+          </div>
+        </div>
+
+        <ion-button expand="block" class="boton-rojito" (click)="closeModal()">
+          Cerrar
+        </ion-button>
+      </div>
+    </div>
+  </div>
+
+
+</ion-content>

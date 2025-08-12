@@ -1,0 +1,401 @@
+// Definicion de colores
+//cambiar el nombre de las variables para que sean mas intuitivas en sentido de cambios
+$azul-havlock: #6280C2;
+$azul-astral: #39728B;
+$grey85: #D9D9D9;
+$magenta: #FF00E5;
+$blanco: #ffffff;
+$gris-claro: #E2E8F0;
+$gris: #cccccc;
+$gris-oscuro: #6b7280;
+$negro: #000000;
+$azul-claro: #8CB4C1;
+$azul-marino: #1E293B;
+$gris-marino-oscuro: #111827;
+$verde-azulado: #0E7490;
+$verde-oscuro: #22C55E;
+$morado: #B2B2E5;
+$naranja: #F97316;
+$rojo: #EF4444;
+$celeste-claro: #d7ddee;
+$celeste: #3882F6;
+$gris-texto:#454545;
+$gris-aclarado:#5e5e5e;
+$sky:#0EA5E9;
+$sky-light:#F0F9FF;
+$azul-clarito:#6366F1;
+$azul-gris:#CBD5E1;
+$azul-gris2:#334155;
+$negro-aclarado:#252525;
+// Variables generales
+$bg-dark: $azul-claro;
+$bg-light: $blanco;
+// Forms
+$input-bg: #E2E8F0;
+$input-txt: #6b7280;
+// Login
+$border-login: #A0E1BE;
+$background-login: #252525;
+// Mi Perfil
+$input-background:#F9F7F5;
+$input-border:#CBD5E1;
+$input-text:#191F3B;
+$screen-title:#FFFFFF;
+// Resalto interfaz (Botones, highlights)
+$resalto:#A0E1BE;
+$resalto-texto:#F9F7F5;
+// Resalto interfaz (sidebar)
+$resalto-sidebar:#6CBC87;
+$resalto-sidebar-texto:#F9F7F5;
+$logout-sidebar-texto:#A0E1BE;
+// Navbar
+$hightlight-usuario:#A0E1BE;
+$usuario-underline:none;
+$usuario-background:var(--BlueGray-BlueGray-50, #F8FAFC);
+$navbarIcon:454545;
+$linea:rgba(255, 255, 255, 0.11);
+$texto-navbar:#ffffff;
+$mobile-navbar-background:#252525;
+//language
+$language-header-highlight:#A0E1BE;
+$language-item:#A0E1BE;
+$language-item-highlight:#A0E1BE;
+$language-background-panel:#252525;
+//Home
+$filter-backgrounds:rgb(255, 255, 255);
+$filter-highlights:#6CBC87;
+$filter-search-name-background:rgb(255, 255, 255);
+$filter-search-background:#A0E1BE;
+$filter-search-name-borders:rgb(0, 0, 0);
+$language-item-inside:#F8FAFC;
+$filter-borders:#3333334D;
+$home-tooltip-background:#D9D9D9;
+$home-tooltip-info:var(--Gray-500, #F8FAFC);
+$home-tooltip-desc:var(--Gray-500, #667085);
+$home-tooltip-title:var(--Gray-900, #101828);
+$home-tooltip-icons:#BADD50;
+$home-search-icon:#000000;
+$home-tooltip-masinfo:var(--BlueGray-BlueGray-50, #191F3B);
+//Scrollbar
+$color-scrollbar: #184922;
+$color-scrollbar-thumb: #4eb84e;
+//OverlayPanels
+$background-panel:#252525;
+//Gradiente background
+$gradiente1: #000000;
+$gradiente2: #92B4A1;
+//Footer
+$gradiente-footer1: "343434";
+$gradiente-footer2: "343434";
+$texto-footer:#ffffff;
+// UI
+$boton-cancelar-color: #6b7280;
+$boton-check-color: #3882F6;
+$volver:#ffffff;
+$txt-dark: #454545;
+$txt-white: #000000;
+$txt-light: #000000;
+//entradas
+$bordeHexag: #CECECE;
+$boton-dis: #B3B1B1;
+$boton-ena: #6CC399;
+$color-btn-font: #F9F7F5;
+$texto: #CECECE;
+$textH2:#BADD50;
+$cards-bg-selected:#A0E1BE;
+$cards-color-selected:#202020;
+$cards-bg-noSelected: #4F4F4F;
+$cards-color-noSelected: #CECECE;
+$cards-color-agotado: #999999;
+
+//asientos de entradas
+$ocupado: #343434;
+$libre:#F9F7F5;
+$seleccionado: #BADD50;
+$bg-flechas: #6CC399;
+$border-dash-color:#BADD50;
+$bg-modal-hover-asientos:#A0E1BE;
+$bg-modal-hover-asientos-color-texto: #202020;
+//Datos compra
+$texto-datos: #F9F7F5;
+$input-texto: #000000;
+$imput-bg: #F9F7F5;
+$btn-bg: #A0E1BE;
+$hexagono-fill:#A0E1BE;
+$hexagono-txt:#CECECE;
+$hexagono-txt-hover: #000000;
+//Resumen compra
+$texto-resumen: #F9F7F5;
+$btn-cpn-bg: #A0E1BE;
+$btn-cpn-txt: #000000;
+$btn-cpnd-br: #BADD50;
+$texto-error: #FF4949;
+//crear-evento
+$titulo: #F9F7F5;
+$text: #CECECE;
+$border-check: #6CC399;
+$btn-cancelar: #D7D7D7;
+$btn-continuar: #A0E1BE;
+$box-shadow: #00000040;
+$input-back-color: #F9F7F5;
+$icons-color: #CECECE;
+$radio-color: #6CC399;
+$background-modal: #191F3B;
+$color-modal: #F9F7F5;
+$button-aceptar: #A0E1BE;
+$mensaje-error: #dc3545;
+$fondo-file: #6CC399;
+$CE_Radio:#BADD50;
+$CE_tooltipBackground:#252525;
+$CE_tooltipBorder:#A0E1BE;
+$CE_tooltipText:#CBD5E1;
+$CE_backgroundInputColor:#F9F7F5;
+$CE_TooltipColor1:#6CC399;
+$CE_TooltipColor2:#BADD50;
+$CE_tipo-precio-border:#F9F7F5;
+$CE_disabled-input:#575555;
+$CE_input-icon-color:black;
+//cargar-establecimiento
+$border-input:#A0E1BE;
+$input-disabled: rgba(239, 239, 239, 0.3);
+$input-disabled-6: rgba(239, 239, 239, 0.6);
+$input-disabled-4: rgba(239, 239, 239, 0.4);
+//VE: Visualizar-Eventos
+$VE_label-color:#F9F7F5;
+$VE_card-backgound:black;
+$VE_checkbox-label:#BADD50;
+$VE_card-border:#A0E1BE;
+$VE_check:#F9F7F5;
+$VE_titulo:#F9F7F5;
+$VE_fila-label:#BADD50;
+
+//ME: Mis-Eventos
+$ME_title:#F9F7F5;
+$ME_cortesiaBg:#A0E1BE;
+$ME_cortesiaText:#000000;
+$ME_buscarBg: #F9F7F5;
+$ME_buscarText: #191F3B;
+$ME_dtBodyBg: #F9F7F5;
+$ME_dtPagerBg: #F9F7F5;
+$ME_dtPagerText: #191F3B;
+$ME_iconsColor: #191F3B;
+$ME_dtPagerBorder: #BADD50;
+$ME_activoBg:#A0E1BE;
+$ME_distintoDeActivoBg:#B5B5B5;
+$ME_iconsDelSort:#F9F7F5;
+$ME_borderTopDatatableTable: #F9F7F5;
+$ME_borderBottomDatatableTable: #F9F7F5;
+$ME_borderTopTrDatatableBody: #000;
+$ME_borderCheckBoxTh: #F9F7F5;
+$ME_borderCheckBoxTr: #000;
+$ME_borderTable: #F9F7F5;
+$ME_bgSinEventos: #252525;
+$ME_titleCreatedUser:#BADD50;
+
+//Cortesía
+$CO_title:#F9F7F5;
+$CO_labelText:#F9F7F5;
+$CO_invitarBg:#A0E1BE;
+$CO_anularBg: #BADD50;
+$CO_invitarText:#000000;
+$CO_cancelarBg:#D7D7D7;
+$CO_cancelarText:#000000;
+$CO_descBBDD:#F9F7F5;
+$CO_inputsPlaceholder:#000;
+$CO_inputNumberBtnBgColor:#A0E1BE;
+$CO_inputNumberBtnTextColor:#000;
+//MP: Mis Pedidos
+$MP_title: #6CC399;
+$MP_bgAccordionHeader: #F9F7F5;
+$MP_nombreEvento: #6CC399;
+$MP_ETicketBg: #6CC399;
+$MP_ETicketText: #F9F7F5;
+$MP_verTicketBg: #6CC399;
+$MP_verTicketText: #000000;
+//CFG: Configuraciones
+$CFG_title: #F9F7F5;
+$CFG_personalizarHomeText:#6CC399;
+$CFG_personalizarHomeBorder:#6CC399;
+$CFG_btnPreventasBg:#414141;
+$CFG_btnPreventasBgActive:#6CC399;
+$CFG_modalHeaderBg:#343434;
+$CFG_modalConfigsBg:#000;
+$CFG_modalConfigsText:#F9F7F5;
+$CFG_modalCancelBg:#9DA9BF;
+$CFG_modalSaveBg:#A0E1BE;
+$CFG_modalTexts:#000;
+// $CFG_labelText: #191F3B;
+// $CFG_cancelarBg: #64748B;
+// $CFG_cancelarText: #CBD5E1;
+// $CFG_aceptarBg: #BADD50;
+//Botones
+$btn-success-background:#A0E1BE;
+$btn-success-background-llamativo:#BADD50;
+$btn-success-text:#000000;
+//Recuperar-password
+$RP_title:#F9F7F5;
+$RP_infoText:#F9F7F5;
+$btn-border-text: #A0E1BE;
+$RP_btn-enviar-bg: #A0E1BE;
+$RP_btn-enviar-text: black;
+$RP_input-placeholder: black;
+$RP_border-box: #A0E1BE;
+
+//VE: Ver Etickets
+$VE_title:#F9F7F5;
+$VE_TicketInfoBorderColor:#F9F7F5;
+$VE_iconActivatedColor:#A0E1BE;
+$VE_textDefaultColor:#CECECE;
+$VE_generalButton:#A0E1BE;
+$VE_box-etickets:#F9F7F5;
+$VE_inputsBg:#D7D7D7;
+
+//HC: Home Carousel
+$HC_titleEvento:#fff;
+$HC_masInfoBg:#60A5A2;
+$HC_masInfoColor:#fff;
+$HC_botonesPaginacionCarousel:#fff;
+
+//DE: Detalle Evento
+$DE_titleColor: #6CC399;
+$DE_verMasyMenos: #6CC399;
+$DE_fechaBtnColorDisabled: #FFFFFF;
+$DE_fechaBtnBgColorDisabled: #4B4B4B;
+$DE_fechaBtnColorEnabled: #202020;
+$DE_fechaBtnBgColorEnabled: #A0E1BE;
+$DE_selFechaColor: #A0E1BE;
+$DE_selFechaLlamativo: #BADD50;
+$DE_borderSelFecha:#4F4D4D;
+
+//EP: Evento Privado
+$EP_colorDescripcion: #F9F7F5;
+$EP_colorTextEmail: #BADD50;
+$EP_borderBox: #A0E1BE;
+$EP_bgBox: #000;
+$EP_btnOutlineBorder: #BADD50;
+$EP_btnOutlineText: #BADD50;
+$EP_cancelBg: #D7D7D7;
+$EP_colorIcon: #BADD50;
+
+
+//AC: Activar Cuenta
+$AC_submitButtonText:#000;
+$AC_contBorder:#A0E1BE;
+$AC_contBg:#000;
+$AC_invalid:red;
+
+//Global
+$GL_check-off:#F9F7F5;
+$GL_check-on:#BADD50;
+
+//RC: Registro Cliente
+$RC_title:#F9F7F5;
+$RC_submitButtonBg: #A0E1BE;
+$RC_submitButtonText: #000;
+$RC_textBottom:#BADD50;
+
+
+//tarjetas
+$bg-tarjeta: #000000;
+//Restablecer contraseñas
+$texto-reset: #F9F7F5;
+$input-reset-txt: #000000;
+$input-reset-bg: #F9F7F5;
+$btn-guardar-bg: #A0E1BE;
+$btn-guardar-txt: #000000;
+$label-input-color: #F9F7F5;
+$color-input: #000000;
+$opcion-select: #BADD50;
+$borde-tarjeta: #A0E1BE;
+$iconSelect: #BADD50;
+$RP_form-containerBorder:#A0E1BE;
+$RP_form-container: #000;
+
+//Notificaciones
+$notif_titulo: #F9F7F5; 
+//tarjeta notificacion
+$notif_bg-tarjeta: #252525;
+//modal
+$notif_border-tarjeta: #A0E1BE;
+
+//errores
+$color_errores: #dc3545;
+$color_agotado: #e92638;
+
+//checks seleccionados
+$checks_select: #6CC399;
+
+//EDITAR EVENTO
+$EE_title: #F9F7F5;
+$EE_subtitles: #F9F7F5;
+$EE_selection: #BADD50;
+$EE_icons: #F9F7F5;
+$EE_placeholder: #000000;
+
+//COMO CREAR EVENTO
+$CCE_title:#F9F7F5;
+$CCE_subtitle:#BADD50;
+
+//Custom Modal
+
+$CM_bgColorModalOverlay: rgba(0, 0, 0, 0.5);
+$CM_bgColorModal:#343434;
+$CM_bgColorCancelar:#D7D7D7;
+$CM_bgColorConfirm:#A0E1BE;
+$CM_warningColor:#FF6060;
+$CM_confirmColor:#BADD50;
+$CM_subTitle: #ADA5BD;
+$CM_bgSecondary: #FFF;
+
+//icono-informativo
+$color-icon-info: #6CC399;
+
+//Login-Desktop
+$texto-login-des: #F9F7F5;
+$texto-click: #BADD50;
+$input-login-des: #000000;
+$input-bg: #F9F7F5;
+$btn-bg: #A0E1BE;
+$btn-bg-llamativo: #BADD50;
+
+
+//Estado Cortesia
+$enviado:#A0E1BE;
+$fallido:#E43B3B;
+$invitacion:#BADD50;
+$pendiente:#B5B5B5;
+$anulada: #191F3B;
+$text-black:#000;
+$text-white:#fff;
+
+//Botones en Formularios
+$btn-bg-conf: #A0E1BE;
+$btn-bg-canc:#D7D7D7;
+
+//Registro
+$title-bienvenido: #BADD50;  
+$title-registro: #F9F7F5; 
+$btn-bg-continuar:#A0E1BE; 
+
+//title
+$title: #F9F7F5;
+
+//PF: preguntas frecuentes
+$PF_borderColor: #A0E1BE;
+$PF_backColor:#000000;
+$PF_color: #BADD50;
+$PF_backTab: #fff;
+$PF_textBlack: #000000;
+
+//colores del stepper
+$circle-select-color: #BADD50;
+$circle-unselect-color: #ffff;
+$text-select-color: #BADD50;
+$text-unselect-color: #ffff;
+
+//control de entradas
+$titulo_CE: #ffff;
+$borde-inp_CE: #ffff;
+$color_CE: #ffff;
+$color-boton_CE: #A0E1BE;
+$btn-search_CE: #BADD50;

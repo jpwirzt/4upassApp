@@ -1,0 +1,165 @@
+@import 'src/general-styles.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap');
+
+body {
+  background: var(--ion-background-color);
+  color: var(--ion-text-color);
+}
+
+ion-header {
+  background: var(--ion-color-primary);
+}
+
+.my-toolbar {
+  padding-top: calc(env(safe-area-inset-top) + 20px);
+  height: calc(55px + env(safe-area-inset-top));
+  box-sizing: content-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+ion-back-button {
+  position: absolute;
+  top: 50%; /* Ubicar verticalmente en mitad de toolbar */
+  transform: translateY(-50%); /* Centrar verticalmente respecto a su propio alto */
+  color: #ebe0e0;
+  z-index: 10;
+}
+
+ion-title {
+  margin: 0; /* quitar márgenes */
+  padding: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif !important;
+  color: white;
+  text-align: center;
+  line-height: 1;
+}
+
+// ion-toolbar.my-toolbar::part(container) {
+//   padding-top: 10px;
+// }
+
+ion-button.mi-boton::part(native) {
+  font-weight: 600;
+  color: #fff;
+  background: #6cc399;
+}
+
+ion-button.no-effects {
+  --background-activated: transparent;
+  --background-focused: transparent;
+  --background-hover: transparent;
+  --background-activated-opacity: 0;
+  --background-focused-opacity: 0;
+  --background-hover-opacity: 0;
+}
+
+ion-label p {
+  font-weight: 600;
+  margin: 4px 0 0 0;
+}
+
+.title {
+  color: white;
+  font-size: 34px;
+}
+
+.accordion {
+  width: 100%;
+}
+
+::ng-deep ion-accordion {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+::ng-deep ion-accordion > ion-item[slot="header"] {
+  --background: #{$MP_bgAccordionHeader};
+  --color: white;
+  --inner-padding-start: 15px;
+  --inner-padding-end: 15px;
+  --border-radius: 0px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+::ng-deep ion-accordion > ion-item[slot="header"] ion-label h2 {
+  color: #{$MP_nombreEvento};
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin: 0;
+}
+
+::ng-deep ion-accordion > ion-item[slot="header"] ion-label p {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 5px 0 0 0;
+}
+
+::ng-deep ion-accordion > [slot="content"] {
+  padding: 16px;
+  background-color: #eeeeee;
+  border-radius: 0 0 8px 8px;
+  color: black;
+}
+
+.eticket-btn {
+  background-color: $MP_ETicketBg;
+  color: $MP_ETicketText;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.ion-button {
+  background: #A0E1BE !important;
+}
+
+@media screen and (min-width: 768px) {
+  ::ng-deep ion-accordion > ion-item[slot="header"] ion-label p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) { 
+
+  .my-toolbar {
+    padding-top: calc(env(safe-area-inset-top) + 30px);
+    height: calc(70px + env(safe-area-inset-top));
+  }
+
+  ion-title {
+    font-size: 1.2rem !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .title {
+    font-size: 28px !important;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  // ::ng-deep ion-accordion > ion-item[slot="header"] ion-label h2 {
+  //   font-size: 18px !important;
+  //   margin-top: 20px;
+  //   margin-bottom: 10px;
+  // }
+
+  // ::ng-deep ion-accordion > ion-item[slot="header"] ion-label p {
+  //   font-size: 15px !important;
+  //   margin-top: 10px;
+  //   margin-bottom: 15px;
+  // }
+}

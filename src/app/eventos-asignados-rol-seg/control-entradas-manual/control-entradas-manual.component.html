@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar class="my-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Buscar Entradas</ion-title>  
+  </ion-toolbar>
+</ion-header>
+
+
+<div class="ion-text-center ion-margin-bottom">
+  <ion-item class="input-search">
+    <ion-icon slot="start" name="search" class="fs-3"></ion-icon>
+    <ion-input
+    [(ngModel)]="filter"
+    (ionInput)="search($event.target.value)"
+    placeholder="Buscar">
+  </ion-input>
+</ion-item>
+</div>
+
+<ion-content>
+  <div *ngIf="entr.length > 0; else noData">
+    <ion-card *ngFor="let item of entr; index as i">
+      <ion-card-content>
+
+        <ion-text>
+          <h2 style="margin-bottom: 10px; font-size: 20px; font-weight: 700; margin-top: 0px;">{{ item.name }}</h2>
+          <p class="sub">Dni:</p>
+          <p *ngIf="item.numeroDNI">
+            {{ getTipoIdentificacionNombre(item.tipoIdentificacion) }}: {{ item.numeroDNI }}
+          </p>
+          <p class="sub">Email:</p>
+          <p>{{ item.email }}</p>
+          <p class="sub">Id:</p>
+          <p> {{ item.idLegible }}</p>
+          <p class="sub">N° de referencia:</p>
+          <p *ngIf="item.idRef">{{ item.idRef }}</p>
+          <p class="sub">Sector:</p>
+          <p style="padding-bottom: 5px;">{{ item.nombreSector }}</p>
+        </ion-text>
+
+        <ion-button
+          expand="block"
+          [ngClass]="item.used ? 'btn-gray' : 'btn-green'"
+          (click)="confirmScan(item.used ?? true, item.idLegible ?? '')">
+          {{ item.used ? 'Escaneado' : 'Escanear' }}
+        </ion-button>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ng-template #noData>
+    <ion-text class="ion-text-center" style="margin: 1px;">
+      <p style="margin: 0px;">Ningún dato coincide</p>
+    </ion-text>
+  </ng-template>
+
+  <div
+    *ngIf="isScanModalOpen"
+    class="custom-modal-backdrop"
+    (click)="closeScanModal()"
+  >
+    <div class="custom-modal-content" (click)="$event.stopPropagation()">
+      <ion-img src="/assets/confirm.svg" style="max-width: 150px; margin: 20px auto;"></ion-img>
+      <h2 style="
+        color:#badd50;
+        margin-bottom: 16px;
+      ">
+        {{ modalMessage }}
+      </h2>
+    </div>
+  </div>
+
+</ion-content>

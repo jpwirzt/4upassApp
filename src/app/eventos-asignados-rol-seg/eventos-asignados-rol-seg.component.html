@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar class="my-toolbar">
+    <ion-title class="titulo">
+      {{ mostrarEventosActivos ? EventosActivosTitle : EventosAsignadosTitle }}
+    </ion-title>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ng-container *ngIf="eventosAsignados.length > 0; else sinEventos">
+    <ion-accordion-group>
+      <ion-accordion *ngFor="let evento of eventosAsignados; let i = index" value="{{evento.id}}">
+        <ion-item slot="header" color="light">
+          <ion-label>
+            <h2>{{ evento?.nombre }}</h2>
+            <p>
+              Fecha: {{ evento?.fecha ? (evento.fecha | date:'dd/MM/yy HH:mm') : 'Sin fecha' }} <br />
+              Lugar: {{ evento?.ubicacion || 'Sin Ubicacion' }}
+            </p>
+          </ion-label>
+        </ion-item>
+        <div class="ion-btn" slot="content">
+          <ion-button expand="block" (click)="toEscanearQR(evento.id ?? '')" class="mi-boton no-effects">
+            Escanear
+          </ion-button>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ng-container>
+
+  <ng-template #sinEventos>
+  <div class="ion-text-center ion-padding">
+    <p class="ion-text-wrap">No hay eventos asignados.</p>
+  </div>
+  </ng-template>
+
+</ion-content>
