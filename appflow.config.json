@@ -1,9 +1,9 @@
 {
   "apps": [
     {
-      "appId": "e40fb9b8",          
-      "root": "4upassApp/4upassApp",         
-      "iosPath": "ios",             
+      "appId": "e40fb9b8",
+      "root": ".",
+      "iosPath": "ios",
       "androidPath": "android",
       "dependencyInstallCommand": "npm ci --legacy-peer-deps",
       "webBuildCommand": "npm run build"
