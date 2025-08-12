@@ -5,7 +5,7 @@
       "root": ".",
       "iosPath": "ios",
       "androidPath": "android",
-      "dependencyInstallCommand": "npm ci --legacy-peer-deps --userconfig=.npmrc",
+      "dependencyInstallCommand": "printf \"registry=https://registry.npmjs.org/\\nalways-auth=false\\n\" > .npmrc && printf \"\" > .npmrc-global && npm ci --legacy-peer-deps --userconfig=.npmrc --globalconfig=.npmrc-global --registry=https://registry.npmjs.org/",
       "webBuildCommand": "npm run build"
     }
   ]
