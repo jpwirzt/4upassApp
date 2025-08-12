@@ -1,9 +1,9 @@
 {
   "apps": [
     {
-      "appId": "e40fb9b8",          // tu App ID
-      "root": "4upassApp/4upassApp",          // subcarpeta donde está package.json/capacitor.config.*
-      "iosPath": "ios",             // relativo a root
+      "appId": "e40fb9b8",          
+      "root": "4upassApp/4upassApp",         
+      "iosPath": "ios",             
       "androidPath": "android",
       "dependencyInstallCommand": "npm ci --legacy-peer-deps",
       "webBuildCommand": "npm run build"
