@@ -5,7 +5,7 @@
       "root": ".",
       "iosPath": "ios",
       "androidPath": "android",
-      "dependencyInstallCommand": "printf \"registry=https://registry.npmjs.org/\\nalways-auth=false\\n\" > .npmrc && printf \"\" > .npmrc-global && npm config --userconfig=.npmrc --globalconfig=.npmrc-global delete //registry.npmjs.org/:_authToken || true && npm config --userconfig=.npmrc --globalconfig=.npmrc-global delete _auth || true && npm ci --legacy-peer-deps --userconfig=.npmrc --globalconfig=.npmrc-global --registry=https://registry.npmjs.org/",
+      "dependencyInstallCommand": "rm -f $HOME/.npmrc && npm ci --legacy-peer-deps --registry=https://registry.npmjs.org/",
       "webBuildCommand": "npm run build"
     }
   ]
