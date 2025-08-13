@@ -5,7 +5,7 @@
       "root": ".",
       "iosPath": "ios",
       "androidPath": "android",
-      "dependencyInstallCommand": "rm -f $HOME/.npmrc && printf \"registry=https://registry.npmjs.org/\\nalways-auth=true\\n@fortawesome:registry=https://npm.fontawesome.com/\\n//npm.fontawesome.com/:_authToken=${FONTAWESOME_NPM_AUTH_TOKEN}\\n\" > .npmrc && printf \"\" > .npmrc-global && npm ci --legacy-peer-deps --userconfig=.npmrc --globalconfig=.npmrc-global --registry=https://registry.npmjs.org/",
+      "dependencyInstallCommand": "npm ci --legacy-peer-deps --registry=https://registry.npmjs.org/",
       "webBuildCommand": "npm run build"
     }
   ]
