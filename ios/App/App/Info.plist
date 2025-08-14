@@ -45,5 +45,14 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<!-- Permisos de privacidad -->
+	<key>NSCameraUsageDescription</key>
+	<string>Necesitamos la cámara para escanear códigos QR.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Usaremos tus contactos para facilitar el envío/compartir información.</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+	<string>whatsapp</string>
+	</array>
 </dict>
 </plist>
